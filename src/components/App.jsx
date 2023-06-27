@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
+import Wrapper from './Wrapper/Wrapper';
 
 class App extends Component {
   state = {
@@ -49,7 +50,7 @@ class App extends Component {
     );
 
     return (
-      <div>
+      <Wrapper>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
         <h2>Contacts</h2>
@@ -58,7 +59,7 @@ class App extends Component {
           data={filterContacts}
           onDeleteContact={this.deleteContact}
         />
-      </div>
+      </Wrapper>
     );
   }
 }
